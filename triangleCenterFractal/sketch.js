@@ -3,7 +3,7 @@ let b;
 let c;
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(windowWidth, windowHeight);
   stroke(255);
 
   a = createVector(0, 0);
