@@ -15,7 +15,7 @@ function setup() {
 function draw() {
   background(0);
 
-  fractalTriangle(a, b, c);
+  fractalTriangle(a, b, c, 0, 7);
   noLoop();
 }
 
