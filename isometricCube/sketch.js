@@ -4,14 +4,15 @@ let c3;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  c1 = color(128, 252, 154);
-  c2 = color(37, 45, 162);
-  c3 = color(214, 36, 146);
+  c1 = color(162, 0, 255);
+  c2 = color(230, 0, 255);
+  c3 = color(255, 149, 0);
+
+  noStroke();
 }
 
 function draw() {
   background(255);
-  noStroke();
   isometricCube(createVector(width/2, height/2), (sin(frameCount * 0.05) + 1) * (windowHeight * 0.5 * 0.5 - 30), c2, c3, c1);
 }
 

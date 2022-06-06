@@ -1,4 +1,5 @@
 const gAcc = 0.98;
+const frictConstant = 0.5;
 
 function Body(x, y, m) {
   this.pos = createVector(x, y);
@@ -8,9 +9,9 @@ function Body(x, y, m) {
   this.vel = createVector(0, 0);
   this.acc = createVector(0, 0);
 
-  this.addForce = function(force) {
+  this.addForce = function(force, ignoreMass = false) {
     let f = force.copy().div(this.mass);
-    this.acc.add(f);
+    this.acc.add(ignoreMass ? force : f);
   }
 
   this.applyGravity = function() {
@@ -18,10 +19,26 @@ function Body(x, y, m) {
     this.addForce(createVector(0, g));
   }
 
+  this.applyFriction = function() {
+    let v = -(this.mass * gAcc);
+    let frictMax = frictConstant * v;
+
+    if (abs(frictMax) > abs(this.vel.x)) {
+      this.addForce(createVector(-this.vel.x, 0), true);
+    } else {
+      if (this.vel.x > 0) {
+        this.addForce(createVector(-frictMax * 0.1, 0), true);
+      } else {
+        this.addForce(createVector(frictMax * 0.1, 0), true);
+      }
+    }
+  }
+
   this.edge = function() {
     if (this.pos.y >= height  - (this.r / 2)) {
       this.pos.y = height  - (this.r / 2);
-      this.vel.y = -this.vel.y
+      this.vel.y = -this.vel.y;
+      // this.applyFriction();
     }
 
     if (this.pos.x <= this.r / 2) {

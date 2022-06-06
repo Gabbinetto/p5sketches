@@ -1,6 +1,7 @@
 let a;
 let b;
 let c;
+let n;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -15,8 +16,7 @@ function setup() {
 function draw() {
   background(0);
 
-  fractalTriangle(a, b, c, 0, 7);
-  noLoop();
+  fractalTriangle(a, b, c, 0, n);
 }
 
 function fractalTriangle(a, b, c, count = 0, limit = 5) {

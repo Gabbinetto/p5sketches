@@ -1,9 +1,11 @@
 let a;
 let b;
 let c;
+let n;
 
 function setup() {
-  createCanvas(400, 400)
+  createCanvas(900, 900)
+
   a = createVector(width / 2, 0);
   b = createVector(width, height);
   c = createVector(0, height);
@@ -11,7 +13,7 @@ function setup() {
 
 function draw() {
   background(0);
-  sierpiskiTriangle(a, b, c, 0, 5)
+  sierpiskiTriangle(a, b, c, 0, n)
 }
 
 function sierpiskiTriangle(a, b, c, count = 0, limit = 5) {
