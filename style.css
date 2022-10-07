@@ -1,58 +1,79 @@
-:root {
-  --font-grow-size: 120%;
-  --font-grow-time: 0.1s;
-}
-
-
-
 body {
-  font-size: 2em;
-  font-family: Monaco, monospace;
-  background-color: #383838;
+  margin: 0;
 }
 
 .title {
+  font-size: 1.5rem;
+  background-color: #a7cdff;
+  text-align: center;
+  margin: none;
   color: white;
-  text-shadow: 3px 3px 4px #505050;
-  font-style: italic;
+  box-shadow: 0px 6px 0px #679add;
+}
+
+.title h1 {
+  margin: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .sketches {
-  padding: 5pt;
-  margin: 20px;
-  border-radius: 15px;
-  width: auto;
-  box-sizing: border-box;
-  line-height: 45px;
-  font-style: italic;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 2rem;
+  margin: 10px;
+  align-items: center;
 }
 
-.sketch {
-  font-size: 100%;
-  transition: font-size var(--font-grow-time) ease-in-out;
-  border-radius: 16px;
-  background-color: #47476e00;
-  padding: 3px;
-  transition: background-color var(--font-grow-time) ease-in-out;
-  transition: border-radius var(--font-grow-time) ease-in-out;
+.sketches div {
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  text-align: center;
+  align-items: center;
+  width: 80%;
+  height: 3rem;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 3px 4px 0px rgb(130, 130, 130);
+  transition: height 150ms;
 }
 
-.sketch:link {
+.sketches div:hover {
+  height: 7rem;
+}
+
+.sketches div a {
   text-decoration: none;
-  color: white;
+  color: #366cb3;
+  margin: 0;
+  width: 100%;
+  border: 1em;
+  transition: color 150ms;
 }
 
-.sketch:visited {
-  color: white;
+.sketches div a:hover {
+  color: #0a2b57;
 }
 
-.sketch:hover, .sketch:active {
-  color: #383838;
-  background-color: #bbbbffff;
-  border-radius: 16px;
-  transition: background-color var(--font-grow-time) ease-in-out;
-  transition: border-radius var(--font-grow-time) ease-in-out;
-  padding: 3px;
-  font-size: var(--font-grow-size);
-  transition: font-size var(--font-grow-time) ease-in-out;
+.sketches div p {
+  margin-top: 12px;
+  font-size: 1.5rem;
+}
+
+footer {
+  /* position: absolute; */
+  margin-top: 3rem;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #366cb3;
+  transition: 150ms;
+}
+
+footer a:hover {
+  color: #0a2b57;
 }

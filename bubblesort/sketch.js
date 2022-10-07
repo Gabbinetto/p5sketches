@@ -5,8 +5,9 @@ let index = 0;
 let steps = 0;
 
 function setup() {
-  // createCanvas(windowWidth, windowHeight);
-  createCanvas(100, 100);
+  createCanvas(windowWidth, windowHeight);
+  // createCanvas(100, 100);
+  // noSmooth();
   r = height / 2 - 10;
   vals = new Array(360);
   for (let i = 0; i < vals.length; i++) {
