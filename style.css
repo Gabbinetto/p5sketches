@@ -29,12 +29,12 @@ body {
 
 .sketch {
   font-size: 100%;
-  transition: font-size var(--font-grow-time) ease-in-out
+  transition: font-size var(--font-grow-time) ease-in-out;
   border-radius: 16px;
-  background-color: #bbbbff00;
+  background-color: #47476e00;
   padding: 3px;
-  transition: background-color var(--font-grow-time) ease-in-out
-  transition: border-radius var(--font-grow-time) ease-in-out
+  transition: background-color var(--font-grow-time) ease-in-out;
+  transition: border-radius var(--font-grow-time) ease-in-out;
 }
 
 .sketch:link {
@@ -50,9 +50,9 @@ body {
   color: #383838;
   background-color: #bbbbffff;
   border-radius: 16px;
-  transition: background-color var(--font-grow-time) ease-in-out
-  transition: border-radius var(--font-grow-time) ease-in-out
+  transition: background-color var(--font-grow-time) ease-in-out;
+  transition: border-radius var(--font-grow-time) ease-in-out;
   padding: 3px;
   font-size: var(--font-grow-size);
-  transition: font-size var(--font-grow-time) ease-in-out
+  transition: font-size var(--font-grow-time) ease-in-out;
 }
