@@ -13,7 +13,7 @@ function setup() {
 
 function draw() {
   background(255);
-  isometricCube(createVector(width/2, height/2), (sin(frameCount * 0.05) + 1) * (windowHeight * 0.5 * 0.5 - 30), c2, c3, c1);
+  isometricCube(createVector(width/2, height/2), (sin(frameCount * 0.05) + 20) * (windowHeight * 0.5 * 0.5 - 30), c2, c3, c1);
 }
 
 function isometricCube(center, length, left = color(255, 80, 80), right = color(80, 255, 80), top = color(80, 80, 255)) {
